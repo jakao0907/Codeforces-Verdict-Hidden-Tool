@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Codeforces Verdict Hidden Tool",
+    "description": "The verdict only show status without which test case",
+    "version": "1.0",
+    "host_permissions": [
+        "https://codeforces.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://codeforces.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+  }
