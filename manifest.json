@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Codeforces Verdict Hidden Tool",
-    "description": "The verdict only show status without which test case",
+    "description": "The tool show codeforces submission status without which test case",
     "version": "1.0",
     "host_permissions": [
         "https://codeforces.com/*"
@@ -18,5 +18,19 @@
     ],
     "background": {
         "service_worker": "background.js"
-    }
+    },
+    "action": {
+        "default_popup": "popup/index.html",
+        "default_icon": {
+            "128": "assets/images/icon-128.jpg"
+        }
+    },
+    "icons":{
+        "128": "assets/images/icon-128.jpg"
+    },
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "storage"
+    ]    
   }
