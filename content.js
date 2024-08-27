@@ -9,7 +9,7 @@ chrome.storage.sync.get(['featureEnabled'], function (result) {
 function removeOnTest() {
     // 遍歷所有的文本節點
     let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-    let node;
+    let node, nextNode;
 
     while (node = walker.nextNode()) {
         // 檢查節點是否包含 'on test'
@@ -23,9 +23,9 @@ function removeOnTest() {
             nextNode.nodeValue = "";
         }
         else{
-            pretestIndex = textContent.indexOf(' on pretest');
+            let pretestIndex = textContent.indexOf(' on pretest');
             if (pretestIndex !== -1) {
-            // 刪除 'on test' 及其後面的所有內容
+            // 刪除 'on pretest' 及其後面的所有內容
                 node.nodeValue = textContent.substring(0, pretestIndex);
                 nextNode = walker.nextNode();
                 nextNode.nodeValue = "";
