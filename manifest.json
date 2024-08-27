@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Codeforces Verdict Hidden Tool",
     "description": "The tool show codeforces submission status without which test case",
-    "version": "1.0",
+    "version": "1.0.1",
     "host_permissions": [
         "https://codeforces.com/*"
     ],
